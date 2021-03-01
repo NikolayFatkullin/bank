@@ -18,6 +18,6 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public Role getByName(String name) {
-        return repository.getByName(name).orElseThrow(RuntimeException::new);
+        return repository.findByRoleName(name).orElseThrow(RuntimeException::new);
     }
 }
