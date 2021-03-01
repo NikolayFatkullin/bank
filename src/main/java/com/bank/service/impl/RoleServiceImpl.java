@@ -3,15 +3,13 @@ package com.bank.service.impl;
 import com.bank.model.Role;
 import com.bank.repository.RoleRepository;
 import com.bank.service.RoleService;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class RoleServiceImpl implements RoleService {
     private final RoleRepository repository;
-
-    public RoleServiceImpl(RoleRepository repository) {
-        this.repository = repository;
-    }
 
     @Override
     public Role save(Role role) {
