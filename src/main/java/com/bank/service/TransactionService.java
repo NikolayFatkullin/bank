@@ -5,5 +5,5 @@ import com.bank.model.Transaction;
 import java.util.List;
 
 public interface TransactionService {
-    List<Transaction> getAllByAccount(int page, int size, Account account);
+    List<Transaction> getAllByAccount(Account account, int page, int size);
 }

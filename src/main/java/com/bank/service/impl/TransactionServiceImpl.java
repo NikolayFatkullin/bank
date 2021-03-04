@@ -16,7 +16,7 @@ public class TransactionServiceImpl implements TransactionService {
     private final TransactionRepository transactionRepository;
 
     @Override
-    public List<Transaction> getAllByAccount(int page, int size, Account account) {
+    public List<Transaction> getAllByAccount(Account account, int page, int size) {
         PageRequest pageable = PageRequest.of(page, size, Sort.by("date").descending()
                 .and(Sort.by("id")));
         return transactionRepository.getAllByAccount(pageable, account);
